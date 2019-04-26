@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>StudentList</title> 
+    </head>
+    <body>
+        <table>
+            
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+            </tr>
+            {{ range $key, $value:= .}}
+            <tr>
+                <td>{{ $value.FirstName}}</td>
+                <td>{{ $value.LastName}}</td>
+                <td>{{ $value.Age}}</td>
+            </tr>
+            {{ else }}
+                empty
+            {{end}}
+        </table>
+    </body>
+</html>
